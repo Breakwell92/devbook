@@ -1,0 +1,423 @@
+{
+	"info": {
+		"_postman_id": "1a8851be-0682-4846-a054-d3d69c0d9c3a",
+		"name": "devbook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "dpbreakwell@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Dan",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Breakwell",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "1992-01-18",
+							"type": "text"
+						},
+						{
+							"key": "national_insurance_no",
+							"value": "AB123456A",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"value": "some url",
+							"type": "text"
+						},
+						{
+							"key": "full_address",
+							"value": "4 A Road, Somewhere, AB12 3CD",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "I love Laravel",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "devbook.local/api/users",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create (min age check)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rando@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Joe",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Bloggs",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "01/01/2004",
+							"type": "text"
+						},
+						{
+							"key": "national_insurance_no",
+							"value": "AB123456A",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"value": "some url",
+							"type": "text"
+						},
+						{
+							"key": "full_address",
+							"value": "4 A Road, Somewhere, AB12 3CD",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "I love Vue.js",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "devbook.local/api/users",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create (second user)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rando@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Joe",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Bloggs",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "01/01/2000",
+							"type": "text"
+						},
+						{
+							"key": "national_insurance_no",
+							"value": "AB123456A",
+							"type": "text"
+						},
+						{
+							"key": "profile_image",
+							"value": "some url",
+							"type": "text"
+						},
+						{
+							"key": "full_address",
+							"value": "4 A Road, Somewhere, AB12 3CD",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "I love Vue.js",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "devbook.local/api/users",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show (me)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "FikKfxZ7qq",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "devbook.local/api/users/me",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show (other by email)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "FikKfxZ7qq",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "devbook.local/api/users/rando@gmail.com",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users",
+						"rando@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show (other by id)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "FikKfxZ7qq",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "devbook.local/api/users/rando@gmail.com",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users",
+						"rando@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "FikKfxZ7qq",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Steve",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "updated bio",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "devbook.local/api/users/me",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update (restricted fields)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "FikKfxZ7qq",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Paul",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dave@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "updated my bio",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "devbook.local/api/users/me",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "FikKfxZ7qq",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "devbook.local/api/users/me",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bio keyword search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "nW9miEKDWl",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "devbook.local/api/users?search=laravel,vue",
+					"host": [
+						"devbook",
+						"local"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "laravel,vue"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
