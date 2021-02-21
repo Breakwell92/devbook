@@ -13,6 +13,8 @@ Requires Homestead/Vagrant
 - Run `exit`
 - Run `php artisan migrate`
 
+I have included `devbook.postman_collection.json` in the repo to provide examples of the API requests. These are the examples I used to test the API
+
 
 ## Create a profile
 **Method:** POST
